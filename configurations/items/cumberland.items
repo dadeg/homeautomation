@@ -4,5 +4,5 @@ Group Lights
 Group:Switch:OR(ON, OFF) 		Lights 		"All Lights [(%d)]"
 
 /* Lights */
-Switch Light_Red 		"Red LED" 		    (Lights) { gpio="pin:5 debounce:10" }
-Switch Light_Green 	"Green LED"       (Lights) { gpio="pin:17 debounce:10" }
+Switch Light_Red 		"Red LED" 		    (Lights) { gpio="pin:13 debounce:10" }
+Switch Light_Green 	"Green LED"       (Lights) { gpio="pin:5 debounce:10" }
