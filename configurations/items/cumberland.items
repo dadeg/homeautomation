@@ -9,4 +9,4 @@ Switch Light_Red 		"Red LED" 		    (Lights) { gpio="pin:13 debounce:10 activelow
 Switch Light_Green 	"Green LED"       (Lights) { gpio="pin:5 debounce:10 activelow:yes" }
 
 /* Buttons, switches, controls */
-Contact Tiny_Button 	"Tiny Button"       (Controls) { gpio="pin:18 debounce:1000 activelow:yes" }
+Contact Tiny_Button 	"Tiny Button [%s]"       (Controls) { gpio="pin:18 debounce:1000 activelow:yes" }
