@@ -11,5 +11,8 @@ sitemap cumberland label="Main Cumberland Menu"
       Switch item=Light_Red
       Switch item=Light_Green
     }
+    Frame label="Tiny Button" {
+      Contact item=Tiny_Button
+    }
   }
 }
