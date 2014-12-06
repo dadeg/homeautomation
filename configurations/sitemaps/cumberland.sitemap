@@ -3,6 +3,9 @@ sitemap cumberland label="Main Cumberland Menu"
   Frame {
     Group item=Lights label="Lights" icon="firstfloor"
   }
+  Frame {
+    Group item=Controls label="Controls" icon="firstfloor"
+  }
   Frame label="Cumberland" {
     Text label="LED Lights" icon="firstfloor" {
       Switch item=Lights mappings=[OFF="All Off"]
@@ -10,9 +13,6 @@ sitemap cumberland label="Main Cumberland Menu"
     Frame label="Individual Lights" {
       Switch item=Light_Red
       Switch item=Light_Green
-    }
-    Frame label="Tiny Button" {
-      Contact item=Tiny_Button
     }
   }
 }
