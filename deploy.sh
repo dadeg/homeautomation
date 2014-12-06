@@ -9,7 +9,7 @@ pins=( 5 13 17 )
 for pin in "${pins[@]}"
 do
   echo "Cleaning pin ${pin}..."
-  sudo sh -c 'echo ${pin} > /sys/class/gpio/unexport'
+  sudo sh -c "echo ${pin} > /sys/class/gpio/unexport"
 done
 
 sudo ./start.sh
