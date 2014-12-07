@@ -5,7 +5,7 @@ echo Updating to latest version...
 git pull origin master
 
 echo Cleaning up GPIO pins that openHAB currently uses...
-pins=( 5 13 17 )
+pins=( 5 13 17 18 )
 for pin in "${pins[@]}"
 do
   echo "Cleaning pin ${pin}..."
