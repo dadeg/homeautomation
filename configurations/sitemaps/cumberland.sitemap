@@ -13,5 +13,6 @@ sitemap cumberland label="Main Cumberland Menu"
     }
     Frame label="Statuses" {
       Text item=Tiny_Button
+      Text item=PIR1
   }
 }
