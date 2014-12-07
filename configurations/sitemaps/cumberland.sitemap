@@ -13,8 +13,5 @@ sitemap cumberland label="Main Cumberland Menu"
     }
     Frame label="Statuses" {
       Text item=Tiny_Button
-      Text item=Light_Red
-      Text item=Light_Green
-    }
   }
 }
