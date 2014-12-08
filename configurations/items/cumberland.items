@@ -5,7 +5,7 @@ Group Controls
 Group:Switch:OR(ON, OFF) 		Lights 		"All Lights [(%d)]"
 
 /* Lights */
-Switch Light_Red 		"Red LED" 		    (Lights) { gpio="pin:13 debounce:10 activelow:yes" }
+Switch AlarmLight 		"Alarm LED" 		    (Lights) { gpio="pin:13 debounce:10 activelow:yes" }
 Switch Light_Green 	"Green LED"       (Lights) { gpio="pin:5 debounce:10 activelow:yes" }
 
 /* Buttons, switches, controls */

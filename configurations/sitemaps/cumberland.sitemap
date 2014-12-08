@@ -8,7 +8,7 @@ sitemap cumberland label="Main Cumberland Menu"
       Switch item=Lights mappings=[OFF="All Off"]
     }
     Frame label="Individual Lights" {
-      Switch item=Light_Red
+      Switch item=AlarmLight
       Switch item=Light_Green
     }
     Frame label="Statuses" {
