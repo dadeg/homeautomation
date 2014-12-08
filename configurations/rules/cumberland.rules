@@ -1,0 +1,29 @@
+import org.openhab.core.library.types.*
+import org.openhab.core.persistence.*
+import org.openhab.model.script.actions.*
+
+var Number counter = 0
+var Number lastCheck = 0
+
+rule "alarmLightOn"
+when
+        Item PIR1 changed from OPEN to CLOSED
+then
+        counter = counter + 1
+
+        sendCommand(AlarmLight, ON)
+
+end
+
+rule "alarmLightOff"
+when
+        Time cron "0 * * * * ?"
+then
+        if(lastCheck == counter) {
+                counter = 0
+                lastCheck = -1;
+                sendCommand(AlarmLight, OFF)
+        } else {
+                lastCheck = counter
+        }
+end
