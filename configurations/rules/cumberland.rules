@@ -2,28 +2,16 @@ import org.openhab.core.library.types.*
 import org.openhab.core.persistence.*
 import org.openhab.model.script.actions.*
 
-var Number counter = 0
-var Number lastCheck = 0
-
-rule "alarmLightOn"
+rule "soundTheAlarm"
 when
-        Item PIR1 changed from OPEN to CLOSED
+  Item PIR1 changed from OPEN to CLOSED
 then
-        counter = counter + 1
-
-        sendCommand(AlarmLight, ON)
-
+  sendCommand(AlarmLight, ON)
 end
 
-rule "alarmLightOff"
+rule "endTheAlarm"
 when
-        Time cron "0 * * * * ?"
+  Item PIR1 changed from CLOSED to OPEN
 then
-        if(lastCheck == counter) {
-                counter = 0
-                lastCheck = -1;
-                sendCommand(AlarmLight, OFF)
-        } else {
-                lastCheck = counter
-        }
+  sendCommand(AlarmLight, OFF)
 end
