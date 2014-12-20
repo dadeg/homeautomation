@@ -1,8 +1,17 @@
 #!/bin/bash
-echo Checking out master branch...
-git checkout master
-echo Updating to latest version...
-git pull origin master
+
+# -g flag for updating codebase before starting up.
+#
+while getopts "g:" opt; do
+  case $opt in
+    g)
+    echo Checking out master branch...
+    git checkout master
+    echo Updating to latest version...
+    git pull origin master
+    ;;
+  esac
+done
 
 echo Cleaning up GPIO pins that openHAB currently uses...
 pins=( 5 13 17 18 )
