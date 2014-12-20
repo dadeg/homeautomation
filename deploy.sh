@@ -1,14 +1,16 @@
 #!/bin/bash
 
 # -g flag for updating codebase before starting up.
-#
-while getopts "g:" opt; do
+while getopts ":g" opt; do
   case $opt in
     g)
     echo Checking out master branch...
     git checkout master
     echo Updating to latest version...
     git pull origin master
+    ;;
+    \?)
+    echo "Invalid option: -$OPTARG" >&2
     ;;
   esac
 done
