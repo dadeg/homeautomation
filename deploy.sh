@@ -23,4 +23,10 @@ do
   sudo sh -c "echo ${pin} > /sys/class/gpio/unexport"
 done
 
+# start OneWire FileSystem (OWFS) for 1-wire temperature/humidity/etc. sensors.
+sudo umount /mnt/1wire
+sudo modprobe w1-gpio
+sudo modprobe w1-therm
+sudo owfs -F -uall -m /mnt/1wire --allow_other
+
 sudo ./start.sh
