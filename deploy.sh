@@ -24,6 +24,7 @@ do
 done
 
 # start OneWire FileSystem (OWFS) for 1-wire temperature/humidity/etc. sensors.
+echo "Starting OWFS"
 sudo umount /mnt/1wire
 sudo modprobe w1-gpio
 sudo modprobe w1-therm
