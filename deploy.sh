@@ -16,7 +16,7 @@ while getopts ":g" opt; do
 done
 
 echo Cleaning up GPIO pins that openHAB currently uses...
-pins=( 5 13 17 18 22 )
+pins=( 4 5 13 17 18 )
 for pin in "${pins[@]}"
 do
   echo "Cleaning pin ${pin}..."
