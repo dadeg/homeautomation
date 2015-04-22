@@ -12,7 +12,7 @@ sitemap cumberland label="Main Cumberland Menu"
       Switch item=Light_Green
     }
     Frame label="Statuses" {
-      Text item=Tiny_Button
+      /* Text item=Tiny_Button */
       Text item=PIR1
     }
     Frame label="Sensors" {

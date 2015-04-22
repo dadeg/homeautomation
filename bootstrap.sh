@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Examples:
+# ./bootstrap -g will pull down latest code and then start up.
+# ./bootstrap without the flag will just clean the pins and start up the services.
+# ./stop will stop openhab.
+
 # -g flag for updating codebase before starting up.
 while getopts ":g" opt; do
   case $opt in
@@ -16,7 +21,7 @@ while getopts ":g" opt; do
 done
 
 echo Cleaning up GPIO pins that openHAB currently uses...
-pins=( 4 5 13 17 18 )
+pins=( 4 5 13 22 )
 for pin in "${pins[@]}"
 do
   echo "Cleaning pin ${pin}..."
