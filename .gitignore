@@ -11,3 +11,7 @@ etc/rrd4j*
 .Trashes
 ehthumbs.db
 Thumbs.db
+.project
+workspace/
+*.log
+*.instance
