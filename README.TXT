@@ -73,6 +73,7 @@ STEPS TO SEND 433MHz codes:
 
 Hooking 433 up to Openhab was as easy as setting up a rule that executeCommandLine() with the command above.
 Remember to set the chmod to allow the openhab user to execute the file: `chmod 777 codesend`
+I made a helper function that sends the code 3 times, it is in /opt/433-transceiver/RCSwitch.sh, you use it the same way you would codesend.
 
 5 original switches:
 delay: 180-184, protocol: 1, bitlength: 24
