@@ -71,6 +71,8 @@ STEPS TO SEND 433MHz codes:
 3. run `make` in /433Utils/RPi_utils.
 4. send the code by running `sudo ./codesend decimalCode protocolNumber delayNumber`. The bitlength is hardcoded to 24 for now, maybe you'll have to change that. if so, remember to run `make` again on the code.
 
+Hooking 433 up to Openhab was as easy as setting up a rule that executeCommandLine() with the command above.
+Remember to set the chmod to allow the openhab user to execute the file: `chmod 777 codesend`
 
 5 original switches:
 delay: 180-184, protocol: 1, bitlength: 24
