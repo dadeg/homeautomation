@@ -20,26 +20,26 @@ rule "FamilyRoom1LightOff"
 when
   Item Family_Room_Light_1 changed from ON to OFF
 then
-  executeCommandLine("sudo ~/openhab/configurations/scripts/RCSwitch.sh 4199740 1 182")
+  executeCommandLine("~/openhab/configurations/scripts/RCSwitch.sh 4199740 1 182")
 end
 
 rule "FamilyRoom1LightOn"
 when
   Item Family_Room_Light_1 changed from OFF to ON
 then
-  executeCommandLine("sudo ~/openhab/configurations/scripts/RCSwitch.sh 4199731 1 182")
+  executeCommandLine("~/openhab/configurations/scripts/RCSwitch.sh 4199731 1 182")
 end
 
 rule "FamilyRoom2LightOff"
 when
   Item Family_Room_Light_2 changed from ON to OFF
 then
-  executeCommandLine("sudo ~/openhab/configurations/scripts/RCSwitch.sh 4199884 1 182")
+  executeCommandLine("~/openhab/configurations/scripts/RCSwitch.sh 4199884 1 182")
 end
 
 rule "FamilyRoom2LightOn"
 when
   Item Family_Room_Light_2 changed from OFF to ON
 then
-  executeCommandLine("sudo ~/openhab/configurations/scripts/RCSwitch.sh 4199875 1 182")
+  executeCommandLine("~/openhab/configurations/scripts/RCSwitch.sh 4199875 1 182")
 end
