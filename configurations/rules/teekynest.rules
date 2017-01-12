@@ -20,7 +20,7 @@ rule "FamilyRoomLights"
 when
   Item FamilyRoomLights received command
 then
-	if (familyRoomLights.state == "ON") {
+	if (FamilyRoomLights.state == "ON") {
 		executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 1_on")
   		executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 2_on")
   	} else {
