@@ -4,12 +4,14 @@ sitemap cumberland label="Main Cumberland Menu"
     Group item=Lights label="Lights" icon="firstfloor"
   }
   Frame label="Cumberland" {
-    Text label="LED Lights" icon="firstfloor" {
+    Text label="Lights" icon="firstfloor" {
       Switch item=Lights mappings=[OFF="All Off"]
     }
     Frame label="Individual Lights" {
       Switch item=AlarmLight
       Switch item=Light_Green
+      Switch item=Family_Room_Light_1
+      Switch item=Family_Room_Light_2
     }
     Frame label="Statuses" {
       /* Text item=Tiny_Button */
