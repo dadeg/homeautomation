@@ -8,8 +8,7 @@ Group:Switch:OR(ON, OFF) 		Lights 		"All Lights [(%d)]"
 /* Lights */
 Switch AlarmLight 		"Alarm LED" 		    (Lights) { gpio="pin:13 debounce:10 activelow:yes" }
 Switch Light_Green 	"Green LED"       (Lights) { gpio="pin:5 debounce:10 activelow:yes" }
-Switch Family_Room_Light_1 	"Family Room 1"       (Lights) {  }
-Switch Family_Room_Light_2 	"Family Room 2"       (Lights) {  }
+Switch FamilyRoomLights 	"Family Room"       (Lights) {  }
 
 /* Buttons, switches, controls */
 /* Contact Tiny_Button 	"Tiny Button [%s]"       (Controls) { gpio="pin:17 debounce:10" } */
