@@ -21,12 +21,14 @@ when
   Item FamilyRoomLights received command
 then
 	if (FamilyRoomLights.state == ON) {
-	val results = executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 1_on", 5000) // wait up to five seconds
+	val results = executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 1_on", 2000) // wait up to five seconds
 logInfo("Test", results)
-  		logInfo('OSGi', executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 2_on"))
-  	} else {
-  		logInfo('OSGi', executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 1_off"))
-  		logInfo('OSGi', executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 2_off"))
+  		val results = executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 2_on", 2000) // wait up to five seconds
+logInfo("Test", results)
+  	} else {val results = executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 1_off", 2000) // wait up to five seconds
+logInfo("Test", results)
+val results = executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 2_off", 2000) // wait up to five seconds
+logInfo("Test", results)
   		
   	}
   		
