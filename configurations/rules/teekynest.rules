@@ -21,11 +21,9 @@ when
   Item FamilyRoomLights received command
 then
 	if (FamilyRoomLights.state == ON) {
-		logInfo('OSGi', executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 1_on"))
-  		logInfo('OSGi', executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 2_on"))
+		executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 1_on && /opt/433mhz-transceiver/RCSwitch.sh 2_on")
   	} else {
-  		logInfo('OSGi', executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 1_off"))
-  		logInfo('OSGi', executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 2_off"))
+  		executeCommandLine("/opt/433mhz-transceiver/RCSwitch.sh 1_off && /opt/433mhz-transceiver/RCSwitch.sh 2_off")
   	}
   		
 end
